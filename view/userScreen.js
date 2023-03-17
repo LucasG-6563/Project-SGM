@@ -2,11 +2,10 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
   
-  const Item = ({title}) => (
-    <View>
-      <Text style={{fontSize: 25, borderEndWidth: 10, borderWidth: 2, borderRadius: 20, textAlign: 'center'}}>{title}</Text>
-    </View>
-  )
+/**
+ * 
+ * @returns retorna a tela de dados do usuário
+ */
 function UserScreen(){
 return(
   <View style={styles.container}>
@@ -25,17 +24,16 @@ return(
 )
 }
 
+/**
+ * Aqui tem um estilo para essa tela seguir
+ * Obs: Esse não será o foco no momento, apenas fiz o básico para ter uma noção de como vai ficar
+ */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  pages: {
-    position: 'absolute',
-    bottom: 0,
-
   }
 });
 
