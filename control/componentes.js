@@ -1,6 +1,5 @@
 import React from 'react'
-import { StatusBar } from 'expo-status-bar';
-import { Text, FlatList, StatusBar } from 'react-native';
+import { Text, FlatList, SafeAreaView  } from 'react-native';
 
 const DADOS = [
     {
@@ -17,13 +16,13 @@ const DADOS = [
     }
 ];
 
-const Materias = ({titulo}) => (
+const Materias = ({DADOS}) => (
     <View>
-        <Text>{titulo}</Text>
+        <Text>{DADOS.titulo}</Text>
     </View>
 );
 
-const lista = () => {
+const Lista = () => {
     return(
         <SafeAreaView>
             <FlatList data={DADOS} renderItem={({materias}) => <Materias titulo={materias.titulo}/>} keyExtractor={materias => materias.id}/>
@@ -35,4 +34,4 @@ const lista = () => {
  * listNotas é um componente para listar as notas que recebe de um ?obj?
  */
 
-export default lista;
+export default Lista;
