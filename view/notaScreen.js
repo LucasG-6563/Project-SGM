@@ -1,7 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
-import TestHeader from '../control/header';
+import { StyleSheet, View, Text} from 'react-native';
 import Grades from '../control/gradeAccordion'
 /**
  * AINDA EM DESENVOLVIMENTO
@@ -11,10 +10,11 @@ import Grades from '../control/gradeAccordion'
 function NotaScreen(){
 return(
   <View style={styles.container}>
-    <View>
-      <Grades />
-    </View>
+    <Text>Teste</Text>
     <StatusBar style="auto" />
+    <View>
+      <Grades/>
+    </View>
   </View>
 )
 }

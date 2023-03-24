@@ -1,14 +1,12 @@
 import React from 'react';
 import { Appbar } from 'react-native-paper';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import NotaScreen from '../view/notaScreen';
 
 const TestHeader = () => {
   return (
-    <SafeAreaProvider>
-        <Appbar.Header>
+        <Appbar.Header mode='center-aligned'>
         <Appbar.Content title="Title" />
         </Appbar.Header>
-    </SafeAreaProvider>
   );
 };
 
