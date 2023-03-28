@@ -1,19 +1,14 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
   
 /**
  * 
  * @returns retorna a tela de dados do usuário
  */
-function UserScreen(navigation){
+function UserScreen(){
 return(
   <View style={styles.container}>
-    <Appbar.Header mode='center-aligned'>
-      <Appbar.BackAction onPress={() => {}} />
-      <Appbar.Content title="Title" />
-    </Appbar.Header>
       {/* <Button title='O "title" não pode ficar vazio' color='green'/> */}
       <View style={{borderColor: 'black', borderWidth: 2, alignItems: 'center'}}>
         <Image source={require('../assets/padrao.jpg')} style={{width: 250, height: 250}}/>

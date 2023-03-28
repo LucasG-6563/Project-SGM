@@ -6,8 +6,8 @@ const TestHeader = () => {
   const navigation = useNavigation();
   return (
         <Appbar.Header mode='center-aligned'>
-        <TouchableRipple onPress={()=> navigation.navigate('UserScreen', {name: 'UserScreen'})}>
-          <Avatar.Text size={36} label="TT"/>
+        <TouchableRipple onPress={()=> navigation.navigate('userScreen', {name: 'userScreen'})}>
+          <Avatar.Text size={48} label="TT"/>
         </TouchableRipple>
         <Appbar.Content title="Title" />
         </Appbar.Header>

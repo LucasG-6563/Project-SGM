@@ -1,20 +1,22 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, Text} from 'react-native';
+import { StyleSheet, View, Button} from 'react-native';
 import Grades from '../control/gradeAccordion'
+import { useNavigation } from '@react-navigation/native';
 /**
  * AINDA EM DESENVOLVIMENTO
  * Obs: peguei algumas linhas de comando de userScreen.js
  * @returns Retorna a tela de notas
  */
 function NotaScreen(){
+  const navigation = useNavigation();
 return(
   <View style={styles.container}>
-    <Text>Teste</Text>
     <StatusBar style="auto" />
     <View>
       <Grades/>
     </View>
+    <Button onPress={()=>{navigation.navigate('faltaScreen')}} title='FALTAS!' />
   </View>
 )
 }
