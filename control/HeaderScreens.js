@@ -9,7 +9,7 @@ const TestHeader = () => {
         <TouchableRipple onPress={()=> navigation.navigate('userScreen', {name: 'userScreen'})}>
           <Avatar.Text size={48} label="TT"/>
         </TouchableRipple>
-        <Appbar.Content title="Title" />
+        <Appbar.Content title='Notas' />
         </Appbar.Header>
   );
 };
