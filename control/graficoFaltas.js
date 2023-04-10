@@ -1,31 +1,39 @@
 import React from "react";
 import { Text, View, Dimensions} from "react-native";
-import { LineChart } from "react-native-chart-kit";
+import { PieChart } from "react-native-chart-kit";
+
+const data = [
+  {
+    name: "Faltas",
+    aulas: 6,
+    color: "red",
+    legendFontColor: "#7F7F7F",
+    legendFontSize: 15
+  },
+  {
+    name: "Presenças",
+    aulas: 2,
+    color: "blue",
+    legendFontColor: "#7F7F7F",
+    legendFontSize: 15
+  },
+  {
+    name: "Aulas",
+    aulas: 12,
+    color: "gray",
+    legendFontColor: "#7F7F7F",
+    legendFontSize: 15
+  }
+  
+];
 
 const GraficoFaltas = () => {
     return(
         <View>
-  <LineChart
-    data={{
-      labels: ["January", "February", "March", "April", "May", "June"],
-      datasets: [
-        {
-          data: [
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100,
-            Math.random() * 100
-          ]
-        }
-      ]
-    }}
+  <PieChart
+    data={data}
     width={Dimensions.get("window").width} // from react-native
-    height={220}
-    yAxisLabel="$"
-    yAxisSuffix="k"
-    yAxisInterval={1} // optional, defaults to 1
+    height={300}
     chartConfig={{
       backgroundColor: "#e26a00",
       backgroundGradientFrom: "#fb8c00",
@@ -42,11 +50,9 @@ const GraficoFaltas = () => {
         stroke: "#ffa726"
       }
     }}
-    bezier
-    style={{
-      marginVertical: 8,
-      borderRadius: 16
-    }}
+    accessor={"aulas"}
+    backgroundColor={"transparent"}
+    paddingLeft={"20"}
   />
 </View>
     )
