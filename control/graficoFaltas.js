@@ -12,7 +12,7 @@ const data = [
   },
   {
     name: "Presenças",
-    aulas: 2,
+    aulas: 10,
     color: "blue",
     legendFontColor: "#7F7F7F",
     legendFontSize: 15
