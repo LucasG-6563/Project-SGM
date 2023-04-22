@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Dimensions } from "react-native";
+import { View, Dimensions } from "react-native";
 import { PieChart } from "react-native-chart-kit";
 
 const data = [
@@ -8,21 +8,21 @@ const data = [
     aulas: 6,
     color: "red",
     legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    legendFontSize: 13
   },
   {
     name: "Presenças",
     aulas: 10,
     color: "blue",
     legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    legendFontSize: 13
   },
   {
     name: "Aulas",
     aulas: 12,
     color: "gray",
     legendFontColor: "#7F7F7F",
-    legendFontSize: 15
+    legendFontSize: 13
   }
 
 ];
@@ -45,14 +45,13 @@ const GraficoFaltas = () => {
             borderRadius: 16
           },
           propsForDots: {
-            r: "6",
+            r: "3",
             strokeWidth: "2",
             stroke: "#ffa726"
           }
         }}
         accessor={"aulas"}
         backgroundColor={"transparent"}
-        paddingLeft={"20"}
       />
     </View>
   )
