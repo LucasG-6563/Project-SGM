@@ -1,11 +1,12 @@
 import UserScreen from './view/userScreen';
 import NotaScreen from './view/notaScreen';
-import { Avatar } from 'react-native-paper';
+import { Avatar, Button } from 'react-native-paper';
 import FaltaScreen from './view/faltaScreen';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { TouchableOpacity } from 'react-native';
+import LoginScreen from './view/loginScreen';
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator()
@@ -26,6 +27,8 @@ function BarraTelas() {
           </TouchableOpacity>,
         headerLeftContainerStyle: { paddingLeft: 5 },
         headerRightContainerStyle: { paddingRight: 5 },
+        headerRight: () =>
+          <Button onPress={() => { navigation.navigate('Login') }}> LOGIN </Button>,
         tabBarIcon: ({ focused, color, size }) =>
           (<Icon name={focused ? 'trophy' : 'trophy-outline'} color={color} size={size} />)
       }}
@@ -56,6 +59,8 @@ export default function App() {
         <Stack.Screen name='Principal' component={BarraTelas}
           options={{ headerShown: false }} />
         <Stack.Screen name='Perfil' component={UserScreen} />
+        <Stack.Screen name='Login' component={LoginScreen}
+          options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
