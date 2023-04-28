@@ -9,7 +9,7 @@ const GraficoFaltas = () => {
       {DADOS_FALTAS.map((item, index) => (
         <PieChart
           key={index}
-          data={item}
+          data={item.dados}
           width={Dimensions.get("window").width} // from react-native
           height={200}
           chartConfig={{
