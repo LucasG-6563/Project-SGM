@@ -1,6 +1,7 @@
 import React from 'react';
 import { List } from 'react-native-paper';
-import GraficoFaltas from './graficoFaltas';
+import { View, Dimensions, Text } from 'react-native';
+import { PieChart } from "react-native-chart-kit";
 import estilos from '../assets/estilos';
 import DADOS_FALTAS from '../model/dadosFaltas';
 
@@ -39,18 +40,15 @@ const GraficoFaltas2 = (index, item) => {
 const Faltas = () => {
     return (
         <List.AccordionGroup>
-            <List.Accordion title={"Trabalho de Graduação  -  Faltas:" + 6} id="1" style={estilos.accordion}>
-                <List.Item title="Gráfico" description={
-                    () => <GraficoFaltas />
-                } style={estilos.accordionItens} />
-            </List.Accordion>
-            <List.Accordion title="Teste Manual" id="2" style={estilos.accordion}>
-                <List.Item title="Titulo Item Teste" style={estilos.accordionItens} />
-            </List.Accordion>
-            {DADOS_FALTAS.map((item) => (
-                <List.Accordion title={item.titulo} id={item.titulo} style={estilos.accordion} >
+            {DADOS_FALTAS.map((item, index) => (
+                <List.Accordion title={item.sigla + " - Faltas: " + item.dados[0].aulas}
+                    id={item.sigla}
+                    key={item.sigla + index.toString}
+                    description={item.titulo}
+                    style={estilos.accordion} >
                     <List.Item title="Gráfico" description={
-                        () => { GraficoFaltas2(index, item.dados) }
+                        item.dados[2].aulas > 0 ? () => GraficoFaltas2(index, item.dados)
+                            : <Text>Essa matérias não possui aulas...</Text>
                     } />
                 </List.Accordion>
             ))}

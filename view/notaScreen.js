@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import Grades from '../control/gradeAccordion'
 
 /**
@@ -8,25 +8,24 @@ import Grades from '../control/gradeAccordion'
  */
 function NotaScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <StatusBar style="auto" />
       <View>
         <Grades />
       </View>
-    </View>
+    </ScrollView>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
+    paddingVertical: 20,
+    backgroundColor: '#FFF',
     alignContent: 'center',
   },
-  pages: {
-    position: 'absolute',
-    bottom: 0,
+  justifyContent: {
+    justifyContent: 'center',
 
   },
 
