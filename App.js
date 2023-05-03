@@ -1,6 +1,6 @@
 import UserScreen from './view/userScreen';
 import NotaScreen from './view/notaScreen';
-import { Avatar, Button } from 'react-native-paper';
+import { Avatar } from 'react-native-paper';
 import FaltaScreen from './view/faltaScreen';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
@@ -23,12 +23,11 @@ function BarraTelas() {
       <Tab.Screen name='Notas' component={NotaScreen} options={{
         headerTitleAlign: 'center', headerLeft: () =>
           <TouchableOpacity onPress={() => { navigation.navigate('Perfil') }}>
-            <Avatar.Text label='TT' size={38} />
+            <Avatar.Icon icon={'account-circle'} size={38} color='white'
+              style={{ backgroundColor: '#35AAFF' }} />
           </TouchableOpacity>,
         headerLeftContainerStyle: { paddingLeft: 5 },
         headerRightContainerStyle: { paddingRight: 5 },
-        headerRight: () =>
-          <Button onPress={() => { navigation.navigate('Login') }}> LOGIN </Button>,
         tabBarIcon: ({ focused, color, size }) =>
           (<Icon name={focused ? 'trophy' : 'trophy-outline'} color={color} size={size} />)
       }}
@@ -36,7 +35,8 @@ function BarraTelas() {
       <Tab.Screen name='Faltas' component={FaltaScreen} options={{
         headerTitleAlign: 'center', headerLeft: () =>
           <TouchableOpacity onPress={() => { navigation.navigate('Perfil') }}>
-            <Avatar.Text label='TT' size={38} />
+            <Avatar.Icon icon={'account-circle'} size={38} color='white'
+              style={{ backgroundColor: '#35AAFF' }} />
           </TouchableOpacity>,
         headerLeftContainerStyle: { paddingLeft: 5 },
         headerRightContainerStyle: { paddingRight: 5 },
@@ -55,7 +55,7 @@ function BarraTelas() {
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Principal'>
+      <Stack.Navigator initialRouteName='Login'>
         <Stack.Screen name='Principal' component={BarraTelas}
           options={{ headerShown: false }} />
         <Stack.Screen name='Perfil' component={UserScreen} />

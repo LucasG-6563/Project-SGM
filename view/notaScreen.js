@@ -1,6 +1,6 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View, ScrollView } from 'react-native';
+import { StyleSheet, View, ScrollView, Text } from 'react-native';
 import Grades from '../control/gradeAccordion'
 
 /**
@@ -8,12 +8,17 @@ import Grades from '../control/gradeAccordion'
  */
 function NotaScreen() {
   return (
-    <ScrollView style={styles.container}>
-      <StatusBar style="auto" />
-      <View>
-        <Grades />
+    <View style={styles.container}>
+      <ScrollView style={styles.container}>
+        <StatusBar style="auto" />
+        <View>
+          <Grades />
+        </View>
+      </ScrollView>
+      <View style={{ alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Made by Lucas Guimarães</Text>
       </View>
-    </ScrollView>
+    </View>
   )
 }
 

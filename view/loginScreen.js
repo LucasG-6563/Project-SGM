@@ -49,6 +49,10 @@ export default function LoginScreen() {
 
             </View>
 
+            <View style={{ alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+                <Text>Made by Lucas Guimarães</Text>
+            </View>
+
             <StatusBar style="auto" />
 
         </KeyboardAvoidingView>
