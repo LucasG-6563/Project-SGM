@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "Project-SGM",
+    "name": "Projeto-SGM",
     "slug": "Project-SGM",
     "version": "0.26.0",
     "orientation": "portrait",
@@ -18,16 +18,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.lucasG.ProjetoSGM"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.lucasG.ProjetoSGM"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ee25824d-1a20-4106-bb5e-498e1ec49c43"
+      }
+    },
+    "owner": "lg-6563"
   }
 }
