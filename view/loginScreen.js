@@ -22,21 +22,11 @@ export default function LoginScreen() {
             </View>
 
             <View style={styles.container}>
-                <TextInput
-                    id="txtUsuario"
-                    style={styles.input}
-                    placeholder="Usuario"
-                    autoCorrect={false}
-                    onChangeText={setUsuario}
-                    value={usuario}
+                <TextInput id="txtUsuario" style={styles.input} placeholder="Usuario"
+                    autoCorrect={false} onChangeText={setUsuario} value={usuario}
                 />
-                <TextInput
-                    id="txtSenha"
-                    style={styles.input}
-                    placeholder="Senha"
-                    autoCorrect={false}
-                    onChangeText={setSenha}
-                    secureTextEntry={true}
+                <TextInput id="txtSenha" style={styles.input} placeholder="Senha"
+                    autoCorrect={false} onChangeText={setSenha} secureTextEntry={true}
                     value={senha}
                 />
 
